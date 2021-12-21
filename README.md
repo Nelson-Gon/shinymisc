@@ -1,5 +1,3 @@
-shinymisc: Miscellaneous shiny apps
-================
 
 # shinymisc: Miscellaneous shiny apps built as part of debugging/exploration
 

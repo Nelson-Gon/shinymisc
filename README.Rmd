@@ -1,5 +1,4 @@
 ---
-title: 'shinymisc: Miscellaneous shiny apps'
 output: github_document
 ---
 
