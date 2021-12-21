@@ -11,12 +11,16 @@ ui <- fluidPage(
 server <- function(session, input, output){
   my_funs <- reactive({
     if(!req(input$pkg_name) %in% loadedNamespaces()){
-      do.call("library", list(req(input$pkg_name)))
+      
+      suppressPackageStartupMessages(
+      library(req(input$pkg_name), character.only = TRUE)
+      )
     }
-    lsf.str(paste0("package:",req(input$pkg_name)))
+    getNamespaceExports(req(input$pkg_name))
   })
   output$all_funs <- renderText(my_funs())
 }
 
 
 shinyApp(ui, server)
+

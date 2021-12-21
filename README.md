@@ -1,7 +1,5 @@
 shinymisc: Miscellaneous shiny apps
 ================
-Nelson Gonzabato
-2021-12-21
 
 # shinymisc: Miscellaneous shiny apps built as part of debugging/exploration
 
@@ -31,6 +29,12 @@ accessing functions in a package. In particular, I wanted to be able to
 load a function from a package without necessarily loading said package
 first. This is important because sometimes loading a package may result
 in function conflicts causing further debugging work.
+
+Keep building,
+
+Nelson
+
+2021-12-21
 
 ------------------------------------------------------------------------
 
