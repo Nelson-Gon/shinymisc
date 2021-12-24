@@ -21,8 +21,12 @@ ui <- fluidPage(
                                   selected = NULL))
           ),
           
-          pickerInput("plot_theme", label = "Theme", choices=NULL,
-                      selected = NULL)
+         fluidRow(column(8,pickerInput("plot_theme", label = "Theme", 
+                        choices=NULL,
+                      selected = NULL)),
+                  column(4, textInput("theme_pkg", "Package",
+                                      value = "ggplot2")))
+                  
           
           
         ),
@@ -47,7 +51,8 @@ server <- function(session, input, output){
   
   get_themes <- reactive(
     {
-      themes_only<-grep("^theme_",getNamespaceExports("ggplot2"))
+      themes_from <- req(input$theme_pkg)
+      themes_only<-grep("^theme_",getNamespaceExports(themes_from))
       return(getNamespaceExports("ggplot2")[themes_only])
     }
   )
