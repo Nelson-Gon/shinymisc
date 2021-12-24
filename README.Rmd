@@ -20,6 +20,10 @@ This app aims to do something fairly simple. It takes input data, allows user co
 
 This app was written as I tried to play around with namespaces and accessing functions in a package. In particular, I wanted to be able to load a function from a package without necessarily loading said package first. This is important because sometimes loading a package may result in function conflicts causing further debugging work.
 
+* [Plot theming](https://github.com/Nelson-Gon/shinymisc/blob/main/apps/theming.R)
+
+This app takes a fairly more advanced approach at demonstrating how one can combine different `shiny` principles to achieve plot customization. This was built to help me figure out how to best choose themes from different packages. In particular, I wanted to do this even if the package was not on the `search` list. 
+
 
 Keep building,
 

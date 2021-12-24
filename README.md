@@ -28,11 +28,20 @@ load a function from a package without necessarily loading said package
 first. This is important because sometimes loading a package may result
 in function conflicts causing further debugging work.
 
+-   [Plot
+    theming](https://github.com/Nelson-Gon/shinymisc/blob/main/apps/theming.R)
+
+This app takes a fairly more advanced approach at demonstrating how one
+can combine different `shiny` principles to achieve plot customization.
+This was built to help me figure out how to best choose themes from
+different packages. In particular, I wanted to do this even if the
+package was not on the `search` list.
+
 Keep building,
 
 Nelson
 
-2021-12-21
+2021-12-24
 
 ------------------------------------------------------------------------
 
