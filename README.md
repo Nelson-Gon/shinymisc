@@ -7,7 +7,50 @@ purposes only. If you find them useful, please cite as necessary. If you
 would like to build these apps further, please fork the repository and
 suggest changes so I can review.
 
-# List of [apps](https://github.com/Nelson-Gon/shinymisc/blob/main/apps)
+## Installation
+
+``` r
+devtools::install_github("Nelson-Gon/shinymisc")
+```
+
+## Loading the package
+
+``` r
+library(shinymisc)
+```
+
+    ## Loading required package: ggplot2
+
+    ## Loading required package: shiny
+
+    ## Loading required package: shinyWidgets
+
+## Exploring included apps
+
+`shinymisc` contains a number of apps that demonstrate different
+concepts.
+
+To view an app, run the following:
+
+``` r
+run_app(app_name = "theming")
+```
+
+-   [Plot
+    theming](https://github.com/Nelson-Gon/shinymisc/blob/main/R/theming.R)
+
+This app takes a fairly advanced approach at demonstrating how one can
+combine different `shiny` principles to achieve plot customization. This
+was built to help me figure out how to best choose themes from different
+packages. In particular, I wanted to do this even if the package was not
+on the `search` list.
+
+This app explores concepts of reactivity, modularization, testing, and
+scaling in general.
+
+``` r
+run_app("theming")
+```
 
 -   [Sample App](https://nelson-gon.shinyapps.io/sampleapp)
 
@@ -17,10 +60,10 @@ part of a blog I wrote to highlight `shiny` features like reactivity,
 observers, and performance improvements. This blog post is available at
 <https://nelson-gon.github.io/12/12/2021/shiny-reactivity/>. You can
 view the source code
-[here](https://github.com/Nelson-Gon/shinymisc/blob/main/apps/sample_app.R).
+[here](https://github.com/Nelson-Gon/shinymisc/blob/main/R/sample_app.R).
 
 -   [List Package
-    Functions](https://github.com/Nelson-Gon/shinymisc/blob/main/apps/list_functions.R)
+    Functions](https://github.com/Nelson-Gon/shinymisc/blob/main/R/list_functions.R)
 
 This app was written as I tried to play around with namespaces and
 accessing functions in a package. In particular, I wanted to be able to
@@ -28,20 +71,11 @@ load a function from a package without necessarily loading said package
 first. This is important because sometimes loading a package may result
 in function conflicts causing further debugging work.
 
--   [Plot
-    theming](https://github.com/Nelson-Gon/shinymisc/blob/main/apps/theming.R)
-
-This app takes a fairly more advanced approach at demonstrating how one
-can combine different `shiny` principles to achieve plot customization.
-This was built to help me figure out how to best choose themes from
-different packages. In particular, I wanted to do this even if the
-package was not on the `search` list.
-
 Keep building,
 
 Nelson
 
-2021-12-24
+2021-12-27
 
 ------------------------------------------------------------------------
 

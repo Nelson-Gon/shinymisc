@@ -4,4 +4,22 @@ test_that("Test that the theming app works as expected", {
   
 })
 
-testServer()
+
+# test_that("Dataset selction works",
+#           
+#           {
+#             
+# testServer(
+#   themingServer,
+#   {
+#     dataset <- session$getReturned()
+#     
+#     session$setInputs(data_in = "mtcars")
+#     
+#     expect_equal(dataset(), mtcars)
+#   }
+# )            
+#             
+#           }
+#           
+#           )
