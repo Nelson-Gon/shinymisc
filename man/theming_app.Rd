@@ -6,6 +6,9 @@
 \usage{
 theming_app()
 }
+\value{
+A shiny app to demonstrate concepts of modularization, functions, and testing.
+}
 \description{
 An app to demonstrate theming of a plot in shiny
 }

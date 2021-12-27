@@ -22,10 +22,12 @@ update_picker <- function(session, id, label, choices, ...) {
 # UI and server
 # https://mastering-shiny.org/scaling-modules.html
 
-
-themingUI <- function(id)
-  
-{
+#' UI  for the theming app
+#' @param id An id for use inside NS. 
+#' @return a UI module 
+#' @export
+#' 
+themingUI <- function(id) {
   # Function always has an ID
   # Us an NS for ids
   
@@ -59,7 +61,11 @@ themingUI <- function(id)
   
 }
   
-
+#' Server for the theming app
+#' @param id An id for use with moduleServer
+#' @return a server module 
+#' @export
+#' 
 themingServer <- function(id){
   
   # Use moduleServer 
@@ -119,6 +125,8 @@ themingServer <- function(id){
 #' @import shinyWidgets 
 #' @examples 
 #' if(interactive()) theming_app()
+#' @return 
+#' A shiny app to demonstrate concepts of modularization, functions, and testing.
 #' @export
 theming_app <- function() {
   
