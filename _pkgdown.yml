@@ -1,0 +1,25 @@
+title: shinymisc: Miscellaneous shiny apps. 
+url: https://nelson-gon.github.io/shinymisc/
+template:
+   params:
+      bootswatch: darkly
+reference:
+  - title: Exported Functions
+    desc: Functions exported by mde
+    contents:
+       - '`themingServer`'
+       - '`themingUI`'
+       - '`theming_app`'
+       - '`run_app`'
+    
+
+navbar:
+  type: inverse
+  left:
+    - icon: fa-home
+      href: articles/mde_vignette.html
+    - text: "Tutorials"
+      menu:
+        - text: Changelog
+          href: news/index.html
+          
