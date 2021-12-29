@@ -4,10 +4,14 @@
 \alias{themingServer}
 \title{Server for the theming app}
 \usage{
-themingServer(id)
+themingServer(input, output, session)
 }
 \arguments{
-\item{id}{An id for use with moduleServer}
+\item{input}{input from UI}
+
+\item{output}{output server}
+
+\item{session}{session}
 }
 \value{
 a server module

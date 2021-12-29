@@ -1,11 +1,9 @@
 
-# shinymisc: Miscellaneous shiny apps built as part of debugging/exploration
+# shinymisc: Miscellaneous educational shiny apps
 
-This repository holds code for apps I built mainly as part of my
-debugging and exploration process. They are shared here for educational
-purposes only. If you find them useful, please cite as necessary. If you
-would like to build these apps further, please fork the repository and
-suggest changes so I can review.
+The `shinymisc` package provides a set of apps that are useful for
+beginner, intermediate, and advanced `shiny` developers to explore
+different features of the `shiny` framework and philosophy.
 
 ## Installation
 
@@ -75,7 +73,7 @@ Keep building,
 
 Nelson
 
-2021-12-27
+2021-12-29
 
 ------------------------------------------------------------------------
 

@@ -1,5 +1,12 @@
 ---
-output: github_document
+title: "Introducing shinymisc"
+author: "Nelson Gonzabato"
+date: "`r Sys.Date()`"
+output: html_document
+vignette: >
+  %\VignetteIndexEntry{Introducing shinymisc}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +21,6 @@ the `shiny` framework and philosophy.
 
 
 ## Installation 
-
 
 
 ```{r, eval=FALSE}

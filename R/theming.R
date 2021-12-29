@@ -3,7 +3,9 @@
 # Need to remove this call to ggplot2 
 # TODO: Figure out how to get functions from non-loaded packages
 # If the above is done, this call shouldn't exist 
-library(ggplot2)
+
+# lapply(Filter(function(x) grepl("theme_", x), getNamespaceExports("ggplot2")),
+#        utils::getFromNamespace, "ggplot2")
 
 picker_input <- function(id, label, ...) {
   shinyWidgets::pickerInput(id, label, choices = NULL, selected = NULL, ...)
@@ -22,10 +24,15 @@ update_picker <- function(session, id, label, choices, ...) {
 # UI and server
 # https://mastering-shiny.org/scaling-modules.html
 
-#' UI  for the theming app
+#' @title UI  for the theming app
+#' @importFrom utils read.csv
+#' @importFrom shinyWidgets pickerInput updatePickerInput 
 #' @return a UI module 
 #' @export
-#' 
+
+utils::globalVariables(c(".data", "getFunction"))
+getFunction<-utils::getFromNamespace("getFunction", "methods")
+
 themingUI <- function() {
   # Function always has an ID
   # Us an NS for ids
@@ -66,7 +73,7 @@ themingUI <- function() {
 #' @param session session 
 #' @return a server module 
 #' @export
-#' 
+
 themingServer <- function(input, output, session) {
     
     datasets <- reactive(Filter(function(x)
@@ -93,7 +100,7 @@ themingServer <- function(input, output, session) {
           update_picker(
             session,
             id = x,
-            lab = y,
+            label = y,
             choices = names(in_data())
           ),
         c("x_val", "y_val"),
@@ -105,20 +112,20 @@ themingServer <- function(input, output, session) {
                     choices = get_themes())
     })
     
-    output$data_plot <- renderPlot(ggplot(in_data(),
-                                          aes(.data[[req(input$x_val)]],
+    output$data_plot <- renderPlot(ggplot2::ggplot(in_data(),
+                                          ggplot2::aes(.data[[req(input$x_val)]],
                                               .data[[req(input$y_val)]])) +
-                                     geom_point() +
-                                     labs(x = req(input$x_val), 
+                                     ggplot2::geom_point() +
+                                     ggplot2::labs(x = req(input$x_val), 
                                           y = req(input$y_val)) +
                                      get_theme())
     
 }
 
+lapply(Filter(function(x) grepl("theme_", x), getNamespaceExports("ggplot2")),
+       utils::getFromNamespace, "ggplot2")
 #' An app to demonstrate theming of a plot in shiny 
-#' @import ggplot2 
 #' @import shiny
-#' @import shinyWidgets 
 #' @examples 
 #' if(interactive()) theming_app()
 #' @return 
@@ -127,10 +134,10 @@ themingServer <- function(input, output, session) {
 theming_app <- function() {
   
  
-  ui <- fluidPage(themingUI("theming"))
+  ui <- fluidPage(themingUI())
   
   server <- function(session, input, output) {
-  themingServer("theming") 
+  themingServer() 
   }
   
   shinyApp(ui, server)

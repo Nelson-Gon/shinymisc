@@ -17,8 +17,7 @@ navbar:
   type: inverse
   left:
     - icon: fa-home
-      href: articles/mde_vignette.html
-    - text: "Tutorials"
+      href: articles/usage_guide.html
       menu:
         - text: Changelog
           href: news/index.html
