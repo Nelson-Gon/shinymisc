@@ -2,7 +2,7 @@
 title: "Introducing shinymisc"
 author: "Nelson Gonzabato"
 date: "`r Sys.Date()`"
-output: html_document
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introducing shinymisc}
   %\VignetteEngine{knitr::rmarkdown}

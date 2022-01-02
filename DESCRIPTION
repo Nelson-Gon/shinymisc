@@ -16,4 +16,11 @@ Imports:
     methods (>= 4.1.2),
     utils (>= 4.1.2)
 Depends: 
-    shiny (>= 1.7.1),
+    shiny (>= 1.7.1)
+Suggests:
+    knitr,
+    markdown,
+    rmarkdown
+VignetteBuilder:
+    knitr
+    

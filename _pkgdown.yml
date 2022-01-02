@@ -11,8 +11,6 @@ reference:
        - '`themingUI`'
        - '`theming_app`'
        - '`run_app`'
-    
-
 navbar:
   type: inverse
   left:
