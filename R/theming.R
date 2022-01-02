@@ -122,9 +122,9 @@ themingServer <- function(input, output, session) {
     
 }
 
-lapply(Filter(function(x) grepl("theme_", x), getNamespaceExports("ggplot2")),
-       utils::getFromNamespace, "ggplot2")
-#' An app to demonstrate theming of a plot in shiny 
+# lapply(Filter(function(x) grepl("theme_", x), getNamespaceExports("ggplot2")),
+#        utils::getFromNamespace, "ggplot2")
+#' @title An app to demonstrate theming of a plot in shiny 
 #' @import shiny
 #' @examples 
 #' if(interactive()) theming_app()

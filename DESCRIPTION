@@ -4,7 +4,10 @@ Version: 0.1.0.9000
 Authors@R: 
     person("Nelson", "Gonzabato", , "gonzabato@hotmail.com",
             role = c("aut", "cre"))
-Description: Miscellaneous Shiny Apps 
+Description: The "shinymisc" packages aims to provide educational resources
+             to help learners better grasp key "shiny" concepts. By exploring
+             different apps within the package, users can go from beginner to 
+             intermediate "shiny" level all while learning interactively.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -20,7 +23,8 @@ Depends:
 Suggests:
     knitr,
     markdown,
-    rmarkdown
+    rmarkdown,
+    testthat
 VignetteBuilder:
     knitr
     

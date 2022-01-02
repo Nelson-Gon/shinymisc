@@ -2,6 +2,7 @@
 ^\.Rproj\.user$
 .git
 .gitignore
+LICENSE.md
 README.md
 .travis.yml
 README.Rmd
