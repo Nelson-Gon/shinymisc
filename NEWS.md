@@ -1,8 +1,8 @@
 # shinymisc 0.1.0.9000
 
+* There is now an example app to demonstrate the use of `shiny` modules for better code reusability. This example can be run via `run_app("modular_app")`. 
 
-* `run_app` now supports calling an app name via `run_app("app_name")` e.g.
-`run_app("theming")`. 
+* `run_app` now supports calling an app name via `run_app("app_name")` e.g. `run_app("theming")`. 
 
 * `server` and `UI` are now written as separate functions to make testing easier.
 

@@ -69,11 +69,20 @@ load a function from a package without necessarily loading said package
 first. This is important because sometimes loading a package may result
 in function conflicts causing further debugging work.
 
+-   [Shiny
+    Modules](https://github.com/Nelson-Gon/shinymisc/blob/main/R/modular_app.R)
+
+This simple app explores the use of shiny
+[modules](https://shiny.rstudio.com/articles/modules.html). This is
+aimed at demonstrating how one can reuse code across different places
+within the app without copying and pasting the same code over and over
+again. The app also shows how to use some different layouts.
+
 Keep building,
 
 Nelson
 
-2021-12-29
+2022-04-05
 
 ------------------------------------------------------------------------
 

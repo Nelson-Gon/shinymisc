@@ -6,5 +6,7 @@
 #' @export
 run_app <- function(app_name = "theming"){
   switch(app_name,
-         theming = theming_app())
+         theming = theming_app(),
+         modular_app = modular_app()
+         )
 }
