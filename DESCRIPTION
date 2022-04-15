@@ -17,7 +17,9 @@ Imports:
     shinyWidgets (>= 0.6.2),
     ggplot2 (>= 3.3.5),
     methods (>= 4.1.2),
-    utils (>= 4.1.2)
+    utils (>= 4.1.2),
+    dplyr (>= 1.0.7),
+    plotly (>= 4.10.0)
 Depends: 
     shiny (>= 1.7.1)
 Suggests:
@@ -27,4 +29,3 @@ Suggests:
     testthat
 VignetteBuilder:
     knitr
-    

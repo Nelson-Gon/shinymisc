@@ -17,11 +17,7 @@ devtools::install_github("Nelson-Gon/shinymisc")
 library(shinymisc)
 ```
 
-    ## Loading required package: ggplot2
-
     ## Loading required package: shiny
-
-    ## Loading required package: shinyWidgets
 
 ## Exploring included apps
 
@@ -78,11 +74,22 @@ aimed at demonstrating how one can reuse code across different places
 within the app without copying and pasting the same code over and over
 again. The app also shows how to use some different layouts.
 
+-   [More
+    Modules](https://github.com/Nelson-Gon/shinymisc/blob/main/R/more_modules.R)
+
+Another module based app that also includes some basic plotly plots.
+This app was created as a way for me to debug some issue with `shiny`’s
+module system and the use of `update*` functions. Specifically,
+sometimes, it is possible that `update*` functions may not work as
+expected/intended. Unfortunately this is not readily visible in this
+app. Hopefully with more exploration, one could meet this pitfall and
+play with ways around it.
+
 Keep building,
 
 Nelson
 
-2022-04-05
+2022-04-15
 
 ------------------------------------------------------------------------
 
